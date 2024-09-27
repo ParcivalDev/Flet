@@ -1,0 +1,49 @@
+import flet as ft 
+from tabla_excel import create_data_table
+from notas_grid import create_notas_grid
+from galeria_productos import crear_galeria
+
+def main(page: ft.Page):
+    page.bgcolor = ft.colors.BLUE_GREY_800  # Establece el color de fondo
+    page.title = "Tabs en Flet"  # Establece el título de la ventana
+    page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+
+    # Crea el título de la aplicación
+    titulo = ft.Text("Tabs en Flet", size=24, color=ft.colors.WHITE)
+
+    # Crea el contenido para cada pestaña
+    tareas_content = create_data_table(page)
+    perfil_content = create_notas_grid(page)
+    config_content = crear_galeria(page)
+
+    def change_tab(e):
+        tabs_content.content = tab_contents[e.control.selected_index]
+        page.update()
+
+    tabs = ft.Tabs(
+        selected_index=0,
+        animation_duration=300,
+        tabs=[
+            ft.Tab(text="Tareas", icon=ft.icons.LIST_ALT, content=tareas_content),
+            ft.Tab(text="Perfil", icon=ft.icons.NOTE,content=perfil_content),
+            ft.Tab(text="Configuración", icon=ft.icons.BROWSE_GALLERY)
+        ],
+        on_change=change_tab,
+        expand=1
+    )
+
+    tab_contents = [
+        tareas_content,
+        perfil_content,
+        config_content
+    ]
+
+    tabs_content = ft.Container(content=tab_contents[0], expand=True)
+
+    page.add(
+        titulo,
+        tabs,
+        tabs_content
+    )
+
+ft.app(main)
