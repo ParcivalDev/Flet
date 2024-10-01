@@ -174,6 +174,7 @@ def create_data_table(page: ft.Page):
             ft.Divider(height=20, color=ft.colors.GREY_100),  # Línea divisoria
             input_container,
             tabla_container
-        ]),
+        ], scroll=ft.ScrollMode.AUTO, expand=True),
+        expand=True,
         padding=10
     )
