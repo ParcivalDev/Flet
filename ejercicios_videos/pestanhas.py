@@ -8,7 +8,7 @@ def main(page: ft.Page):
     page.bgcolor = ft.colors.BLUE_GREY_800  # Establece el color de fondo
     page.title = "Tabs en Flet"  # Establece el título de la ventana
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
-
+    
     # Crea el título de la aplicación
     titulo = ft.Text("Tabs en Flet", size=24, color=ft.colors.WHITE, weight=ft.FontWeight.BOLD)
 

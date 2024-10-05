@@ -155,9 +155,13 @@ def create_data_table(page: ft.Page):
     )
 
     # Crea un contenedor para los campos de entrada y los botones
-    input_container = ft.Row(
-        controls=[nombre_input, edad_input, agregar_btn, guardar_btn],
-        alignment=ft.MainAxisAlignment.CENTER
+    input_container = ft.ResponsiveRow(
+        [
+            ft.Column(col={"sm": 6, "md": 4}, controls=[nombre_input]),
+            ft.Column(col={"sm": 6, "md": 4}, controls=[edad_input]),
+            ft.Column(col={"sm": 6, "md": 2}, controls=[agregar_btn]),
+            ft.Column(col={"sm": 6, "md": 2}, controls=[guardar_btn]),
+        ],
     )
 
     # Agrega todos los elementos a la página
