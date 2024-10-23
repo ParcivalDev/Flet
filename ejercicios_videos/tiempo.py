@@ -12,7 +12,7 @@ weather_translations = {
     "thunderstorm": "tormenta",
     "snow": "nieve",
     "mist": "neblina",
-    "overcast clouds": "nublado",
+    "overcast clouds": "nubes",
     "light rain": "lluvia ligera",
     "moderate rain": "lluvia moderada",
     "heavy intensity rain": "lluvia intensa",
@@ -42,9 +42,10 @@ weather_translations = {
     "tornado": "tornado"
 }
 
-
+# Ejemplo encontrado sobre el uso de la API de OpenWeatherMap para obtener el clima de una ciudad
 async def get_weather(city):
     async with aiohttp.ClientSession() as session:
+        # Reemplazar CODIGO_API por tu API Key de OpenWeatherMap pero no subirlo a GitHub
         url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=CODIGO_API&units=metric"
         async with session.get(url) as response:
             if response.status != 200:
@@ -56,7 +57,7 @@ async def get_weather(city):
             description_en = data['weather'][0]['description']
             description_es = weather_translations.get(
                 description_en, description_en)
-            return f"Temperatura en {city}: {temp}°C y el cielo estará {description_es}"
+            return f"Temperatura en {city}: {temp}°C con {description_es}"
 
 
 async def main(page: ft.Page):
