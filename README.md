@@ -3,6 +3,8 @@
 Este repositorio contiene tres ejercicios prácticos completados siguiendo el [tutorial oficial de Flet](https://flet.dev/docs/tutorials).
 Los ejemplos de código se encuentran en [flet_examples](https://github.com/ParcivalDev/Flet/tree/main/flet_examples).
 
+También tiene otros [ejercicios](https://github.com/ParcivalDev/Flet/tree/main/ejercicios_videos) realizados siguiendo vídeos de MoureDev y Código Espinoza.
+
 ## Ejercicio 1: To-Do App
 
 Una aplicación simple de lista de tareas que permite a los usuarios:
