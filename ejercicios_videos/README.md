@@ -51,6 +51,7 @@ Una aplicación que integra componentes anteriores usando:
 - Tres secciones: Tareas, Notas y Galería
 
 ### Capturas de pantalla
-![todo_todas](https://github.com/ParcivalDev/Flet/blob/main/ejercicios_videos/capturas/datatable.png?raw=true)
+
+![datatable](https://github.com/ParcivalDev/Flet/blob/main/ejercicios_videos/capturas/datatable.png?raw=true)
 ![galeria](https://github.com/ParcivalDev/Flet/blob/main/ejercicios_videos/capturas/galeria.png?raw=true)
 ![notas](https://github.com/ParcivalDev/Flet/blob/main/ejercicios_videos/capturas/notas.png?raw=true)
